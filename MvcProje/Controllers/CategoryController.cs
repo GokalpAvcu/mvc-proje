@@ -19,12 +19,19 @@ namespace MvcProje.Controllers
         }
         public ActionResult GetCategoryList()
         {
-            var categoryvalues = cm.GetAllBL();
-            return View(categoryvalues);
+            // var categoryvalues = cm.GetAllBL();
+            return View();
         }
+        [HttpGet]
+        public ActionResult AddCategory()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult AddCategory(Category p) 
         {
-            cm.CategoryAddBL(p);
+           // cm.CategoryAddBL(p);
             return RedirectToAction("GetCategoryList");
         
         
