@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,17 @@ namespace MvcProje.Controllers
         {
             var headingvalues = hm.GetList();
             return View(headingvalues);
+        }
+        [HttpGet]
+        public ActionResult AddHeading()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddHeading(Heading p)
+        {
+            hm.HeadingAdd(p);
+            return RedirectToAction("Index");
         }
     }
 }
