@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
-@{ string color = "";}
+@{ string color = "";
 
 }
 
@@ -17,7 +17,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Projects</h1>
+                    
                 </div>
             </div>
         </div><!-- /.container-fluid -->
@@ -27,7 +27,7 @@
         <!-- Default box -->
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Proje İşlemleri</h3>
+                <h3 class="card-title">Başlık İşlemleri</h3>
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
                         <i class="fas fa-minus"></i>
@@ -60,21 +60,41 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
-                            if(item.Category.CategoryName == "Tiyatro")
+                            if (item.Category.CategoryName == "Sosyal Medya")
+                            {
+                                color = "badge bg-indigo";
+                            }
+                            if (item.Category.CategoryName == "Spor")
+                            {
+                                color = "badge bg-orange";
+                            }
+                            if (item.Category.CategoryName == "Yazılım")
+                            {
+                                color = "badge bg-gradient-olive";
+                            }
+                            if (item.Category.CategoryName == "Teknoloji")
+                            {
+                                color = "badge badge-secondary";
+                            }
+                            if (item.Category.CategoryName == "Eğitim")
+                            {
+                                color = "badge bg-gradient-fuchsia";
+                            }
+                            if (item.Category.CategoryName == "Dizi")
                             {
                                 color = "badge badge-danger";
                             }
-                            if(item.Category.CategoryName == "Spor")
+                            if (item.Category.CategoryName == "Tiyatro")
                             {
-                                color = "badge badge-success";
+                                color = "badge bg-gradient-olive";
                             }
-                            if (item.Category.CategoryName == "Film")
+                            if (item.Category.CategoryName == "Kitap")
                             {
                                 color = "badge badge-info";
                             }
-                            if (item.Category.CategoryName == "Seyahat")
+                            if (item.Category.CategoryName == "Film")
                             {
-                                color = "badge badge-secondary";
+                                color = "badge bg-purple ";
                             }
 
 
