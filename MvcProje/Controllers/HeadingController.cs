@@ -46,9 +46,11 @@ namespace MvcProje.Controllers
             hm.HeadingAdd(p);
             return RedirectToAction("Index");
         }
-        public ActionResult ContentByHeading()
+        [HttpGet]
+        public ActionResult EditHeading(int id)
         {
-            return View();
+            var HeadingValue = hm.GetByID(id);
+            return View(HeadingValue);
         }
     }
 }
