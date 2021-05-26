@@ -49,6 +49,14 @@ namespace MvcProje.Controllers
         [HttpGet]
         public ActionResult EditHeading(int id)
         {
+            List<SelectListItem> valuecategory = (from x in cm.GetList()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryID.ToString()
+
+                                                  }).ToList();
+            ViewBag.vlc = valuecategory;
             var HeadingValue = hm.GetByID(id);
             return View(HeadingValue);
         }
