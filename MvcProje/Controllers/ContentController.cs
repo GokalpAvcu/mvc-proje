@@ -18,9 +18,10 @@ namespace MvcProje.Controllers
         {
             return View();
         }
-        public ActionResult ContentByHeading()
+        public ActionResult ContentByHeading(int id)
         {
-            return View();
+            var contentvalues = cm.GetListByHeadingID(id);
+            return View(contentvalues);
         }
     }
 }
