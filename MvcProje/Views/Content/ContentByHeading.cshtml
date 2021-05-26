@@ -25,7 +25,7 @@
                             @foreach (var item in Model)
                             {
                                 <div class="time-label">
-                                    <span class="bg-success">Tarih</span>
+                                    <span class="bg-success">@(((DateTime)item.ContentDate).ToString("dd-MMM-yyyy"))</span>
                                 </div>
                                 <!-- /.timeline-label -->
                                 <!-- timeline item -->
@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                                 <!-- END timeline item -->
-                            }
+                            } 
                         </div>
                     </div>
                     <!-- /.col -->
