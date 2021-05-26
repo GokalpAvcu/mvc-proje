@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,8 @@ namespace MvcProje.Controllers
     {
         // GET: Content
 
-        ContentManager cm=new ContentManager(new EfContentDal())
+        ContentManager cm = new ContentManager(new EfContentDal());
+
         public ActionResult Index()
         {
             return View();
