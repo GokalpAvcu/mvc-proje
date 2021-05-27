@@ -8,12 +8,13 @@
 @using(Html.BeginForm("EditHeading","Heading",FormMethod.Post))
 {
 <div class="form-group">
-    @Html.Label("Başlık Adı")
-    @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
+    @Html.Label("Başlık ID")
+    @Html.TextBoxFor(x => x.HeadingID, new { @class = "form-control" })
     <br />
     @Html.Label("Başlık Adı")
     @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
     <br />
+    @Html.Label("Kategori")
     @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
     <br />
     <button class="btn btn-success">Güncelle</button>
