@@ -28,7 +28,7 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-        public void CategoryAdd(About about)
+        public void AboutAdd(About about)
         {
             throw new NotImplementedException();
         }
