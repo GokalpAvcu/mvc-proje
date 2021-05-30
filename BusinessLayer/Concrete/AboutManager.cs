@@ -40,7 +40,7 @@ namespace BusinessLayer.Concrete
 
         public List<About> GetList()
         {
-            throw new NotImplementedException();
+           return _aboutDal.List();
         }
     }
 }
