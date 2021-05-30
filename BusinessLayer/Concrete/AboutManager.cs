@@ -20,7 +20,7 @@ namespace BusinessLayer.Concrete
 
         public void AboutDelete(About about)
         {
-            throw new NotImplementedException();
+            _aboutDal.Delete(about);
         }
 
         public void AboutUpdate(About about)
