@@ -27,7 +27,8 @@ namespace MvcProje.Controllers
         [HttpPost]
         public ActionResult AddAbout(About p)
         {
-            return View();
+            abm.AboutAdd(p);
+            return RedirectToAction("Index");
         }
     }
 }
