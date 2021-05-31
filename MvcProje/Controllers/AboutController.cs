@@ -16,7 +16,8 @@ namespace MvcProje.Controllers
         AboutManager abm = new AboutManager(new EfAboutDal());
         public ActionResult Index()
         {
-            return View();
+            var aboutvalues = abm.GetList();
+            return View(aboutvalues);
         }
         [HttpGet]
         public ActionResult AddAbout()
