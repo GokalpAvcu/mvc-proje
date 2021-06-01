@@ -1,4 +1,5 @@
-﻿@model EntityLayer.Concrete.Contact
+﻿@using EntityLayer.Concrete
+@model List<Contact>
 @{
     ViewBag.Title = "GetContactDetails";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -111,6 +112,7 @@
                             </div>
                         </div>
                         <!-- /.card-header -->
+                        @foreach(var item in Model){
                         <div class="card-body p-0">
                             <div class="mailbox-read-info">
                                 <h5>Message Subject Is Placed Here</h5>
@@ -147,6 +149,7 @@
                             </div>
                             <!-- /.mailbox-read-message -->
                         </div>
+                        }
                         <!-- /.card-footer -->
                     </div>
                     <!-- /.card -->
