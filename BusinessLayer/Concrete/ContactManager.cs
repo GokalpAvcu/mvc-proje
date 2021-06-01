@@ -33,12 +33,17 @@ namespace BusinessLayer.Concrete
             _Contactdal.Update(contact);
         }
 
-        public Category GetByID(int id)
+        public Contact GetByID(int id)
         {
-            _Contactdal.Insert(contact);
+            return _Contactdal.Get(x=> x.ContactID==id);
         }
 
         public List<Contact> GetList()
+        {
+            return _Contactdal.List();
+        }
+
+        Category IContactService.GetByID(int id)
         {
             throw new NotImplementedException();
         }
