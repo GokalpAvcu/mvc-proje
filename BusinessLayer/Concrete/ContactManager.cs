@@ -20,22 +20,22 @@ namespace BusinessLayer.Concrete
 
         public void ContactAdd(Contact contact)
         {
-            throw new NotImplementedException();
+            _Contactdal.Insert(contact);
         }
 
         public void ContactDelete(Contact contact)
         {
-            throw new NotImplementedException();
+            _Contactdal.Delete(contact);
         }
 
         public void ContactUpdate(Contact contact)
         {
-            throw new NotImplementedException();
+            _Contactdal.Update(contact);
         }
 
         public Category GetByID(int id)
         {
-            throw new NotImplementedException();
+            _Contactdal.Insert(contact);
         }
 
         public List<Contact> GetList()
