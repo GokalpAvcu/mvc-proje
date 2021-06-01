@@ -9,7 +9,7 @@ namespace BusinessLayer.Abstract
 {
     interface IContactService
     {
-        List<Category> GetList();
+        List<Contact> GetList();
         void CategoryAdd(Category category);
         Category GetByID(int id);
         void CategoryDelete(Category category);
