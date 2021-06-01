@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace MvcProje.Controllers
         ContactValidator cv = new ContactValidator();
         public ActionResult Index()
         {
+            var contactvalues = cm.GetList();
             return View();
         }
     }
