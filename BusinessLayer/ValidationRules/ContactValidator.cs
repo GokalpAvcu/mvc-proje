@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.ValidationRules
 {
-    public class ContactValidator
+    public class ContactValidator: AbstractValidator<Contact>
     {
     }
 }
