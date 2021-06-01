@@ -12,7 +12,11 @@ namespace BusinessLayer.ValidationRules
     {
         public ContactValidator()
         {
-            RuleFor(x => x.UserMail).NotEmpty().WithMessage("Mail adresiniboş geçemezsiniz");
+            RuleFor(x => x.UserMail).NotEmpty().WithMessage("Mail adresini boş geçemezsiniz");
+            RuleFor(x => x.Subject).NotEmpty().WithMessage("Konu Adını Boş Geçemezsiniz");
+            RuleFor(x => x.CategoryDescription).NotEmpty().WithMessage("Açıklamayı boş geçemezsiniz");
+            RuleFor(x => x.CategoryName).MinimumLength(3).WithMessage("Lütfen en az 3 karakter giriniz");
+            RuleFor(x => x.CategoryName).MaximumLength(20).WithMessage("Lütfen 20 karakterden fazla değer girişi yapmayın");
         }
     }
 }
