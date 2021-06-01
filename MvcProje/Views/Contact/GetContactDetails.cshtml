@@ -1,5 +1,6 @@
-﻿@using EntityLayer.Concrete
-@model List<Contact>
+﻿@model EntityLayer.Concrete.Contact
+
+
 @{
     ViewBag.Title = "GetContactDetails";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -111,14 +112,12 @@
                                 <a href="#" class="btn btn-tool" data-toggle="tooltip" title="Next"><i class="fas fa-chevron-right"></i></a>
                             </div>
                         </div>
-                        <!-- /.card-header -->
-                        @foreach(var item in Model)
-                        {
                         <div class="card-body p-0">
                             <div class="mailbox-read-info">
-                                <h5>Message Subject Is Placed Here</h5>
+                                <h5>Konu:@Html.DisplayFor(x=>x.Subject)</h5>
+                                <br />
                                 <h6>
-                                    From: support@adminlte.io
+                                    Mail: @Html.DisplayFor(x=>x.UserMail)
                                     <span class="mailbox-read-time float-right">15 Feb. 2015 11:03 PM</span>
                                 </h6>
                             </div>
@@ -150,7 +149,7 @@
                             </div>
                             <!-- /.mailbox-read-message -->
                         </div>
-                        }
+
                         <!-- /.card-footer -->
                     </div>
                     <!-- /.card -->
@@ -158,7 +157,7 @@
                 <!-- /.col -->
             </div>
             <!-- /.row -->
-            </div>
+        </div>
     </section>
 </body>
 </html>
