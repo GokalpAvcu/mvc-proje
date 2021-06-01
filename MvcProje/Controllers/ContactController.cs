@@ -12,6 +12,7 @@ namespace MvcProje.Controllers
     {
         // GET: Contact
         ContactManager cm = new ContactManager(new EfContactDal());
+        ContactValidator cv = new ContactValidator();
         public ActionResult Index()
         {
             return View();
