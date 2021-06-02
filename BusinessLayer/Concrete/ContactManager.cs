@@ -43,9 +43,6 @@ namespace BusinessLayer.Concrete
             return _Contactdal.List();
         }
 
-        Category IContactService.GetByID(int id)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

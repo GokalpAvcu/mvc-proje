@@ -11,7 +11,7 @@ namespace BusinessLayer.Abstract
     {
         List<Contact> GetList();
         void ContactAdd(Contact contact);
-        Category GetByID(int id);
+        Contact GetByID(int id);
         void ContactDelete(Contact contact);
         void ContactUpdate(Contact contact);
     }
