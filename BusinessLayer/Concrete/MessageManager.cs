@@ -11,11 +11,11 @@ namespace BusinessLayer.Concrete
 {
    public class MessageManager: IMessageService
     {
-        IMessageDal messageDal;
+        IMessageDal _messageDal;
 
         public MessageManager(IMessageDal messageDal)
         {
-            this.messageDal = messageDal;
+            this._messageDal = messageDal;
         }
 
         public Message GetByID(int id)
@@ -25,7 +25,7 @@ namespace BusinessLayer.Concrete
 
         public List<Message> GetList()
         {
-            throw new NotImplementedException();
+            return _messageDal.List(x => x.ReceiverMail == "adming@gmail.com");
         }
 
         public void MessageAdd(Message message)
