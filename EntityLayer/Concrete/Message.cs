@@ -12,5 +12,7 @@ namespace EntityLayer.Concrete
         public int MyProperty { get; set; }
         public int MyProperty2 { get; set; }
         public string Subject { get; set; }
+        public string MessageContent { get; set; }
+        public DateTime MessageDate { get; set; }
     }
 }
