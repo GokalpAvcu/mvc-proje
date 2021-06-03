@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-   public class MessageManager
+   public class MessageManager: IMessageService
     {
     }
 }
