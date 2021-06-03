@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-    class Message
+   public class Message
     {
     }
 }
