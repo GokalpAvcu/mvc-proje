@@ -13,6 +13,11 @@ namespace BusinessLayer.Concrete
     {
         IMessageDal messageDal;
 
+        public MessageManager(IMessageDal messageDal)
+        {
+            this.messageDal = messageDal;
+        }
+
         public Message GetByID(int id)
         {
             throw new NotImplementedException();
