@@ -15,6 +15,7 @@ namespace MvcProje.Controllers
         MessageManager cm = new MessageManager(new EfMessageDal());
         public ActionResult Inbox()
         {
+            var messagelist = cm.GetList();
             return View();
         }
     }
