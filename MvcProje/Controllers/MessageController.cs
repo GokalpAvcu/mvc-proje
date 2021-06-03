@@ -9,7 +9,7 @@ namespace MvcProje.Controllers
     public class MessageController : Controller
     {
         // GET: Message
-        public ActionResult Index()
+        public ActionResult Inbox()
         {
             return View();
         }
