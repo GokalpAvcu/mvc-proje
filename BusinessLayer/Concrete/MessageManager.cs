@@ -28,6 +28,16 @@ namespace BusinessLayer.Concrete
             return _messageDal.List(x => x.ReceiverMail == "adming@gmail.com");
         }
 
+        public List<Message> GetListInbox()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Message> GetListSendbox()
+        {
+            throw new NotImplementedException();
+        }
+
         public void MessageAdd(Message message)
         {
             throw new NotImplementedException();
