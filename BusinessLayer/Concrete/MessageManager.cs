@@ -30,7 +30,7 @@ namespace BusinessLayer.Concrete
 
         public List<Message> GetListSendbox()
         {
-            throw new NotImplementedException();
+           return _messageDal.List(x=> x.SenderMail == "admin")
         }
 
         public void MessageAdd(Message message)
