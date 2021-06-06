@@ -23,5 +23,9 @@ namespace MvcProje.Controllers
             var messagelist = cm.GetListSendbox();
             return View(messagelist);
         }
+        public ActionResult NewMessage()
+        {
+            return View();
+        }
     }
 }
