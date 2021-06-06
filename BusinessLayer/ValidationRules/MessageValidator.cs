@@ -11,5 +11,8 @@ namespace BusinessLayer.ValidationRules
     class MessageValidator: AbstractValidator<Message>
     {
         public MessageValidator()
+        {
+            RuleFor(x => x.UserMail).NotEmpty().WithMessage("Mail adresini boş geçemezsiniz");
+        }
     }
 }
