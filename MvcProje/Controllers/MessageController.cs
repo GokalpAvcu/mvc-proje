@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace MvcProje.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult NewMessage()
+        public ActionResult NewMessage(Message p)
         {
             return View();
         }
