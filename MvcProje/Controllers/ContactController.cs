@@ -40,6 +40,7 @@ namespace MvcProje.Controllers
 
             var DraftMail = mm.GetListSendbox().Where(m => m.IsDraft == true).Count();
             ViewBag.DraftMail = DraftMail;
+
             return PartialView();
 
 

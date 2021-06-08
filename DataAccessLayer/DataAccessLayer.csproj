@@ -101,6 +101,10 @@
     <Compile Include="Migrations\202106031938563_mig_add_message.designer.cs">
       <DependentUpon>202106031938563_mig_add_message.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106081926028_mig_messageadd.cs" />
+    <Compile Include="Migrations\202106081926028_mig_messageadd.designer.cs">
+      <DependentUpon>202106081926028_mig_messageadd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -138,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106031938563_mig_add_message.resx">
       <DependentUpon>202106031938563_mig_add_message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106081926028_mig_messageadd.resx">
+      <DependentUpon>202106081926028_mig_messageadd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
