@@ -26,7 +26,7 @@ namespace MvcProje.Controllers
         }
         [HttpGet]
         public ActionResult NewMessage()
-        {
+        {           
             return View();
         }
         [HttpPost]
