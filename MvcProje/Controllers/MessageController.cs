@@ -27,7 +27,7 @@ namespace MvcProje.Controllers
 
         public ActionResult GetInBoxMessageDetails(int id)
         {
-            var contactvalues = cm.GetByID(id);
+            var values = cm.GetByID(id);
             return View(contactvalues);
         }
         [HttpGet]
