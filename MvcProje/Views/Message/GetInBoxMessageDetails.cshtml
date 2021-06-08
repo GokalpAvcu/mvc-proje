@@ -1,4 +1,5 @@
 ﻿@model EntityLayer.Concrete.Message
+
 @{
     ViewBag.Title = "GetInBoxMessageDetails";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -40,10 +41,10 @@
 
                         <div class="card-body p-0">
                             <div class="mailbox-read-info">
-                                <h5>@Html.DisplayFor(c => c.Subject)</h5>
+                                <h5>@Html.DisplayFor(x => x.Subject)</h5>
                                 <br />
                                 <h6>
-                                    Mail: @Html.DisplayFor(c => c.UserMail)
+                                    Mail: @Html.DisplayFor(x => x.SenderMail)
                                     <span class="mailbox-read-time float-right">15 Feb. 2015 11:03 PM</span>
                                 </h6>
                             </div>
@@ -67,7 +68,7 @@
                             </div>
                             <!-- /.mailbox-controls -->
                             <div class="mailbox-read-message">
-                                <p>@Html.DisplayFor(c => c.Message)</p>
+                                <p>@Html.DisplayFor(x => x.MessageContent)</p>
 
                             </div>
 
