@@ -43,7 +43,7 @@
                                 <br />
                                 <h6>
                                     Mail: @Html.DisplayFor(x => x.SenderMail)
-                                    <span class="mailbox-read-time float-right">15 Feb. 2015 11:03 PM</span>
+                                    <span class="mailbox-read-time float-right">@Html.DisplayFor(x=>x.MessageDate.ToShortDateString()</span>
                                 </h6>
                             </div>
                             <!-- /.mailbox-read-info -->
