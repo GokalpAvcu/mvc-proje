@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
@@ -14,6 +15,7 @@ namespace MvcProje.Controllers
         // GET: Message
 
         MessageManager cm = new MessageManager(new EfMessageDal());
+        MessageValidator messagevalidator = new MessageValidator();
         public ActionResult Inbox()
         {
             var messagelist = cm.GetListInbox();
