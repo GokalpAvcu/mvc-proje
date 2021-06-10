@@ -30,6 +30,13 @@ namespace MvcProje.Controllers
             var values = cm.GetByID(id);
             return View(values);
         }
+        public ActionResult GetSendBoxMessageDetails(int id)
+        {
+            var values = cm.GetByID(id);
+            return View(values);
+        }
+
+
         [HttpGet]
         public ActionResult NewMessage()
         {           
