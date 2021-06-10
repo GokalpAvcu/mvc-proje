@@ -8,5 +8,6 @@ namespace EntityLayer.Concrete
 {
    public class ImageFile
     {
+        public int MyProperty { get; set; }
     }
 }
