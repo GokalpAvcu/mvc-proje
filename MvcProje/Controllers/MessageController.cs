@@ -52,7 +52,7 @@ namespace MvcProje.Controllers
             if (results.IsValid)
             {
                 mm.MessageAdd(p);
-                return RedirectToAction("Index");
+                return RedirectToAction("SendBox");
             }
             else
             {
