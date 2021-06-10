@@ -1,4 +1,4 @@
-﻿
+﻿@model EntityLayer.Concrete.Writer
 @{
     ViewBag.Title = "NewMessage";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -39,11 +39,11 @@
         </div>
     </section>
 
-<!-- Main Content-->
+    <!-- Main Content-->
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                @Html.Action("MessageListMenu", "Contact") 
+                @Html.Action("MessageListMenu", "Contact")
                 <!-- /.col -->
                 <div class="col-md-9">
                     <div class="card card-primary card-outline">
@@ -105,10 +105,10 @@
     <script src="~/AdminLTE-3.0.4/plugins/summernote/summernote-bs4.min.js"></script>
     <!-- Page Script -->
     <script>
-$(function () {
-    //Add text editor
-    $('#compose-textarea').summernote()
-  })</script>
+        $(function () {
+            //Add text editor
+            $('#compose-textarea').summernote()
+        })</script>
 </body>
 </html>
 
