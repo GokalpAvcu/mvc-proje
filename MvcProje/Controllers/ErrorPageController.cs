@@ -9,8 +9,9 @@ namespace MvcProje.Controllers
     public class ErrorPageController : Controller
     {
         // GET: ErrorPage
-        public ActionResult Index()
+        public ActionResult Page403()
         {
+            Response.StatusCode = 403;
             return View();
         }
     }
