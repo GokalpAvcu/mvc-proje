@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace MvcProje.Controllers
     public class GalleryController : Controller
     {
         // GET: Gallery
-        ImageFileManager hm = new ImageFileManager(new EfHeadingDal());
+        ImageFileManager ifm = new ImageFileManager(new EfImageFildeDal());
 
         public ActionResult Index()
         {
