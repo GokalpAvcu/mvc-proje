@@ -20,7 +20,7 @@ namespace BusinessLayer.Concrete
 
         public List<ImageFile> GetList()
         {
-            throw new NotImplementedException();
+           return  _imagefileDal.List();
         }
     }
 }
