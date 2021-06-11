@@ -312,6 +312,16 @@
     <Content Include="AdminLTE-3.0.4\docs\_layouts\home.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\page.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\post.html" />
+    <Content Include="AdminLTE-3.0.4\images\amsterdam.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\berlin.jpeg" />
+    <Content Include="AdminLTE-3.0.4\images\helsinki.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\lisbon.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\madrid.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\milano.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\moskova.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\newyork.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\paris.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\roma.jpeg" />
     <Content Include="AdminLTE-3.0.4\index.html" />
     <Content Include="AdminLTE-3.0.4\index2.html" />
     <Content Include="AdminLTE-3.0.4\index3.html" />
