@@ -15,7 +15,8 @@ namespace MvcProje.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var files = ifm.GetList();
+            return View(files);
         }
     }
 }
