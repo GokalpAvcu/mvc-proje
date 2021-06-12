@@ -1,4 +1,7 @@
-﻿@{
+﻿@using EntityLayer.Concrete
+@model List<ImageFile>
+
+@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
@@ -48,11 +51,14 @@
                         </div>
                         <div class="card-body">
                             <div class="row">
+                                @foreach(var item in Model)
+                                {
                                 <div class="col-sm-2">
                                     <a href="https://via.placeholder.com/1200/FFFFFF.png?text=1" data-toggle="lightbox" data-title="sample 1 - white" data-gallery="gallery">
-                                        <img src="https://via.placeholder.com/300/FFFFFF?text=1" class="img-fluid mb-2" alt="white sample" />
+                                        <img src="@item.ImagePath" class="img-fluid mb-2" alt="white sample" />
                                     </a>
-                                </div>                               
+                                </div> 
+                                }
                             </div>
                         </div>
                     </div>
@@ -96,4 +102,4 @@
 </body>
 </html>
 <img src="~/AdminLTE-3.0.4/images/amsterdam.jpg" />
-<img src="~/AdminLTE-3.0.4/images/berlin.jpeg" />
+<img src="~/AdminLTE-3.0.4/images/lisbon.jpg" />
