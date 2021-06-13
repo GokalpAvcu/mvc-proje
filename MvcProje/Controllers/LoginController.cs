@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,7 +15,8 @@ namespace MvcProje.Controllers
         {
             return View();
         }
-        public ActionResult Index()
+        [HttpPost]
+        public ActionResult Index(Admin p)
         {
             return View();
         }
