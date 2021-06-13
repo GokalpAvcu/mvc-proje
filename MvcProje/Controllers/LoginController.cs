@@ -22,6 +22,10 @@ namespace MvcProje.Controllers
             Context c = new Context();
             var adminuserinfo = c.Admins.FirstOrDefault
                (x => x.AdminUserName == p.AdminUserName && x.AdminPassword == p.AdminPassword);
+               if(adminuserinfo != null)
+            {
+                //işlemler
+            }
             return View();
         }
     }
