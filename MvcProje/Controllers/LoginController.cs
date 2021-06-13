@@ -25,6 +25,8 @@ namespace MvcProje.Controllers
                (x => x.AdminUserName == p.AdminUserName && x.AdminPassword == p.AdminPassword);
                if(adminuserinfo != null)
             {
+                FormsAuthentication.SetAuthCookie(adminuserinfo.AdminUserName,false);
+                Session["AdminUserName"] = adminuserinfo.AdminUserName;
                 return RedirectToAction("Index", "AdminCategory");
             }
                else
