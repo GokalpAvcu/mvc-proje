@@ -24,7 +24,11 @@ namespace MvcProje.Controllers
                (x => x.AdminUserName == p.AdminUserName && x.AdminPassword == p.AdminPassword);
                if(adminuserinfo != null)
             {
-                //işlemler
+                return RedirectToAction("Index", "AdminCategory");
+            }
+               else
+            {
+                return RedirectToAction("Index");
             }
             return View();
         }
