@@ -40,6 +40,7 @@ namespace MvcProje.Roles
         {
             Context c = new Context();
             var x = c.Admins.FirstOrDefault(y => y.AdminUserName == username);
+            return new string[] { x.AdminRole };
         }
 
         public override string[] GetUsersInRole(string roleName)
