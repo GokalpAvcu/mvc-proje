@@ -31,7 +31,7 @@ namespace MvcProje.Controllers
             {
                 return RedirectToAction("Index");
             }
-            return View();
+            
         }
     }
 }
