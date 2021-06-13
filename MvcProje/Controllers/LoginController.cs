@@ -1,4 +1,5 @@
-﻿using EntityLayer.Concrete;
+﻿using DataAccessLayer.Concrete;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,9 @@ namespace MvcProje.Controllers
         [HttpPost]
         public ActionResult Index(Admin p)
         {
+            Context c = new Context();
+            var adminuserinfo = c.Admins.FirstOrDefault
+               (x => x.AdminUserName == p.AdminUserName && x.AdminPassword == p.AdminPassword);
             return View();
         }
     }
