@@ -5,6 +5,10 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+@{ string message = "";
+    string color = "";
+}
+
 
 <!DOCTYPE html>
 <html>
@@ -72,8 +76,32 @@
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
+                                        if (item.IsRead == false)
+                                        {
+                                            message = "Oku";
+                                            color = "btn btn-outline-info btn-sm";
+
+                                        }
+                                        if (item.IsRead == true)
+                                        {
+                                            color = "btn btn-outline-success btn-sm";
+                                        }
                                         <tr>
                                             <td>
+                                                @if (item.IsRead == false)
+                                                {
+                                                    <a class="@color" href="/Message/IsRead/@item.MessageID">
+                                                        <i class="far fa-envelope"></i>
+                                                        @message
+                                                    </a>
+                                                }
+                                                else
+                                                {
+                                                    <a class="@color" href="/Message/IsRead/@item.MessageID">
+                                                        <i class="far fa-envelope-open"></i>
+
+                                                    </a>
+                                                }
                                                 <div class="icheck-primary">
                                                     <input type="checkbox" value="" id="check1">
                                                     <label for="check1"></label>
@@ -86,7 +114,7 @@
                                             </td>
                                             <td class="mailbox-attachment"></td>
                                             <td class="mailbox-date">  @(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))
-<td>
+                                            <td>
                                         </tr>
                                     }
                                 </tbody>

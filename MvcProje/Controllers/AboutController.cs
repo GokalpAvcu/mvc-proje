@@ -28,6 +28,10 @@ namespace MvcProje.Controllers
         [HttpPost]
         public ActionResult AddAbout(About p)
         {
+            
+
+
+            
             abm.AboutAdd(p);
             return RedirectToAction("Index");
         }

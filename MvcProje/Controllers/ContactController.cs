@@ -41,6 +41,11 @@ namespace MvcProje.Controllers
             var DraftMail = mm.GetListSendbox().Where(m => m.IsDraft == true).Count();
             ViewBag.DraftMail = DraftMail;
 
+            var readMessage = mm.GetListInbox().Where(m => m.IsRead == true).Count();
+            ViewBag.readMessage = readMessage;
+
+           
+
             return PartialView();
 
 
