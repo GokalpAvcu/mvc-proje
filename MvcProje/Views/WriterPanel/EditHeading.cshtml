@@ -5,11 +5,13 @@
 }
 
 <h2>Başlık Güncelleme Sayfası</h2>
-@using (Html.BeginForm("EditHeading", "Heading", FormMethod.Post))
+@using (Html.BeginForm("EditHeading", "WriterPanel", FormMethod.Post))
 {
     <div class="form-group">
         
         @Html.HiddenFor(x => x.HeadingID)     
+        @Html.HiddenFor(x => x.HeadingDate)     
+        @Html.HiddenFor(x => x.WriterID)     
         @Html.Label("Başlık Adı")
         @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
         <br />

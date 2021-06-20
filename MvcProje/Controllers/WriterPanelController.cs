@@ -65,7 +65,7 @@ namespace MvcProje.Controllers
         public ActionResult EditHeading(Heading p)
         {
             hm.HeadingUpdate(p);
-            return RedirectToAction("Index");
+            return RedirectToAction("MyHeading");
         }
     }
 }
