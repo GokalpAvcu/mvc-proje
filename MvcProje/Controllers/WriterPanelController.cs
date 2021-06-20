@@ -18,7 +18,6 @@ namespace MvcProje.Controllers
         {
             return View();
         }
-        [AllowAnonymous]
         public ActionResult MyHeading()
         {
             //id = 4;
@@ -35,6 +34,7 @@ namespace MvcProje.Controllers
                                                       Value = x.CategoryID.ToString()
 
                                                   }).ToList();
+            ViewBag.vlc = valuecategory;
             return View();
         }
         [HttpPost]
@@ -42,8 +42,9 @@ namespace MvcProje.Controllers
         {
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             p.WriterID = 4;
+            p.HeadingStatus = true;
             hm.HeadingAdd(p);
-            return RedirectToAction("Index");
+            return RedirectToAction("MyHeading");
            
         }
     }
