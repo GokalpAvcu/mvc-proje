@@ -18,6 +18,7 @@ namespace MvcProje.Controllers
         }
         public ActionResult MyHeading()
         {
+            var values= hm.GetList()
             return View();
         }
     }
