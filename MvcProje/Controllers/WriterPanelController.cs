@@ -16,6 +16,7 @@ namespace MvcProje.Controllers
         {
             return View();
         }
+        [AllowAnonymous]
         public ActionResult MyHeading()
         {
             //id = 4;
