@@ -41,6 +41,7 @@ namespace MvcProje.Controllers
         public ActionResult NewHeading(Heading p)
         {
             p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+            p.WriterID = 4;
             hm.HeadingAdd(p);
             return RedirectToAction("Index");
            
