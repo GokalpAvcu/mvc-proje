@@ -23,6 +23,7 @@ namespace MvcProje.Controllers
             var values = hm.GetListByWriter();
             return View(values);
         }
+        [HttpGet]
         public ActionResult NewHeading()
         {
             return View();
