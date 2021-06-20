@@ -13,5 +13,9 @@ namespace MvcProje.Controllers
         {
             return View();
         }
+        public ActionResult MyHeading()
+        {
+            return View();
+        }
     }
 }
