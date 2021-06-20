@@ -16,10 +16,6 @@
         @Html.Label("Kategori")
         @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
         <br />
-        @Html.ValidationMessageFor(x => x.WriterID)
-        <br />
-
-
         <button class="btn btn-info">Başlığı Oluştur</button>
     </div>
 }
