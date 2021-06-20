@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -37,7 +38,7 @@ namespace MvcProje.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult NewHeading()
+        public ActionResult NewHeading(Heading p)
         {
             return View();
         }
