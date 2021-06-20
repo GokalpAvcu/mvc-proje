@@ -4,5 +4,26 @@
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
 
-<h2>EditHeading</h2>
+<h2>Başlık Güncelleme Sayfası</h2>
+@using (Html.BeginForm("EditHeading", "Heading", FormMethod.Post))
+{
+    <div class="form-group">
+        
+        @Html.HiddenFor(x => x.HeadingID)
+        
+        @Html.Label("Başlık Adı")
+        @Html.TextBoxFor(x => x.HeadingName, new { @class = "form-control" })
+        <br />
+        @Html.Label("Tarih")
+        @Html.TextBoxFor(x => x.HeadingDate, new { @class = "form-control" })
+        <br />
+        @Html.Label("Yazar ID")
+        @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control" })
+        <br />
+        @Html.Label("Kategori")
+        @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.vlc, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-success">Güncelle</button>
+    </div>
+}
 
