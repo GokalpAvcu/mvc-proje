@@ -16,10 +16,11 @@ namespace MvcProje.Controllers
         {
             return View();
         }
-        public ActionResult MyHeading()
+        public ActionResult MyHeading(int id)
         {
-            var values= hm.GetList()
-            return View();
+            id = 4;
+            var values = hm.GetListByWriter(id);
+            return View(values);
         }
     }
 }
