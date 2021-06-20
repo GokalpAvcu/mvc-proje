@@ -12,6 +12,7 @@ namespace MvcProje.Controllers
     {
         // GET: WriterPanel
         HeadingManager hm = new HeadingManager(new EfHeadingDal());
+        CategoryManager cm = new CategoryManager(new EfCategoryDal());
         public ActionResult WriterProfile()
         {
             return View();
@@ -24,6 +25,18 @@ namespace MvcProje.Controllers
             return View(values);
         }
         [HttpGet]
+        public ActionResult NewHeading()
+        {
+            List<SelectListItem> valuecategory = (from x in cm.GetList()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryID.ToString()
+
+                                                  }).ToList();
+            return View();
+        }
+        [HttpPost]
         public ActionResult NewHeading()
         {
             return View();
