@@ -40,7 +40,10 @@ namespace MvcProje.Controllers
         [HttpPost]
         public ActionResult NewHeading(Heading p)
         {
-            return View();
+            p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+            hm.HeadingAdd(p);
+            return RedirectToAction("Index");
+           
         }
     }
 }
