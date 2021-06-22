@@ -19,6 +19,11 @@ namespace MvcProje.Controllers
             var messagelist = mm.GetListInbox();
             return View(messagelist);
         }
+        public ActionResult Sendbox()
+        {
+            var messagelist = mm.GetListSendbox();
+            return View(messagelist);
+        }
         public PartialViewResult MessageListMenu()
         {
             return PartialView();
