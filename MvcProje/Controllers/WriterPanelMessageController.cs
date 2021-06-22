@@ -14,9 +14,10 @@ namespace MvcProje.Controllers
         // GET: WriterPanelMessage
         MessageManager mm = new MessageManager(new EfMessageDal());
         MessageValidator messagevalidator = new MessageValidator();
-        public ActionResult Index()
+        public ActionResult Inbox()
         {
-            return View();
+            var messagelist = mm.GetListInbox();
+            return View(messagelist);
         }
     }
 }
