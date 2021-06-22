@@ -19,5 +19,9 @@ namespace MvcProje.Controllers
             var messagelist = mm.GetListInbox();
             return View(messagelist);
         }
+        public PartialViewResult MessageListMenu()
+        {
+            return PartialView();
+        }
     }
 }
