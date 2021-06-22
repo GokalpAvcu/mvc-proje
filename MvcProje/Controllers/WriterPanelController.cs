@@ -72,7 +72,7 @@ namespace MvcProje.Controllers
             var HeadingValue = hm.GetByID(id);
             HeadingValue.HeadingStatus = false;
             hm.HeadingDelete(HeadingValue);
-            return RedirectToAction("index");
+            return RedirectToAction("MyHeading");
         }
     }
 }
