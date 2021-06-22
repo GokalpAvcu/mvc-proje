@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
+using DataAccessLayer.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +12,8 @@ namespace MvcProje.Controllers
     public class WriterPanelMessageController : Controller
     {
         // GET: WriterPanelMessage
+        MessageManager mm = new MessageManager(new EfMessageDal());
+        MessageValidator messagevalidator = new MessageValidator();
         public ActionResult Index()
         {
             return View();
