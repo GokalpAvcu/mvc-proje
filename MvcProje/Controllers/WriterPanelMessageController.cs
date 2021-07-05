@@ -66,5 +66,4 @@ namespace MvcProje.Controllers
         }
     }
 }
-    }
-}
+    
