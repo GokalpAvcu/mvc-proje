@@ -28,5 +28,15 @@ namespace MvcProje.Controllers
         {
             return PartialView();
         }
+        public ActionResult GetInBoxMessageDetails(int id)
+        {
+            var values = mm.GetByID(id);
+            return View(values);
+        }
+        public ActionResult GetSendBoxMessageDetails(int id)
+        {
+            var values = mm.GetByID(id);
+            return View(values);
+        }
     }
 }
