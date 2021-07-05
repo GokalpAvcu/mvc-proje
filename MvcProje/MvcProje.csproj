@@ -2446,6 +2446,7 @@
     <Content Include="Views\WriterPanelMessage\Inbox.cshtml" />
     <Content Include="Views\WriterPanelMessage\MessageListMenu.cshtml" />
     <Content Include="Views\WriterPanelMessage\Sendbox.cshtml" />
+    <Content Include="Views\WriterPanelMessage\GetInBoxMessageDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
